@@ -1,11 +1,12 @@
 {
   "name": "@bumble/timeout",
   "version": "0.1.0",
-  "description": "thenable setTimeout.",
+  "description": "Thenable setTimeout.",
   "main": "build/bundle-cjs.js",
   "module": "build/bundle-esm.js",
   "author": "Jack and Amy Steam <jacksteamdev@gmail.com>",
   "license": "MIT",
+  "repository": "bumble-org/timeout",
   "devDependencies": {
     "@sucrase/jest-plugin": "^2.0.0",
     "eslint": "^5.11.0",
