@@ -1,0 +1,38 @@
+{
+  "name": "@bumble/timeout",
+  "version": "0.1.0",
+  "description": "thenable setTimeout.",
+  "main": "build/bundle-cjs.js",
+  "module": "build/bundle-esm.js",
+  "author": "Jack and Amy Steam <jacksteamdev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "eslint": "^5.11.0",
+    "jest": "^24.1.0",
+    "rollup": "^1.6.0",
+    "sucrase": "^3.9.5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "test": "jest",
+    "preversion": "npm run build",
+    "postversion": "git push && npm publish"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    },
+    "setupFilesAfterEnv": [
+      "./tests/jest.setup.js"
+    ]
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "ms": "^2.1.1"
+  }
+}
